@@ -210,21 +210,6 @@
             "rid": "win"
           }
         }
-      },
-      "DataAccessLibrary/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Dapper": "2.0.123",
-          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
-          "System.Data.SqlClient": "4.8.4"
-        },
-        "compile": {
-          "bin/placeholder/DataAccessLibrary.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DataAccessLibrary.dll": {}
-        }
       }
     }
   },
@@ -628,16 +613,13 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "DataAccessLibrary/1.0.0": {
-      "type": "project",
-      "path": "../DataAccessLibrary/DataAccessLibrary.csproj",
-      "msbuildProject": "../DataAccessLibrary/DataAccessLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "DataAccessLibrary >= 1.0.0"
+      "Dapper >= 2.0.123",
+      "Microsoft.Extensions.Configuration.Abstractions >= 6.0.0",
+      "System.Data.SqlClient >= 4.8.4"
     ]
   },
   "packageFolders": {
@@ -646,11 +628,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\Blazordemo\\BlazorDemoUI\\BlazorDemoUI\\BlazorDemoUI.csproj",
-      "projectName": "BlazorDemoUI",
-      "projectPath": "D:\\GitHub\\Blazordemo\\BlazorDemoUI\\BlazorDemoUI\\BlazorDemoUI.csproj",
+      "projectUniqueName": "D:\\GitHub\\Blazordemo\\BlazorDemoUI\\DataAccessLibrary\\DataAccessLibrary.csproj",
+      "projectName": "DataAccessLibrary",
+      "projectPath": "D:\\GitHub\\Blazordemo\\BlazorDemoUI\\DataAccessLibrary\\DataAccessLibrary.csproj",
       "packagesPath": "C:\\Users\\Elston\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\Blazordemo\\BlazorDemoUI\\BlazorDemoUI\\obj\\",
+      "outputPath": "D:\\GitHub\\Blazordemo\\BlazorDemoUI\\DataAccessLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Elston\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -666,11 +648,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "D:\\GitHub\\Blazordemo\\BlazorDemoUI\\DataAccessLibrary\\DataAccessLibrary.csproj": {
-              "projectPath": "D:\\GitHub\\Blazordemo\\BlazorDemoUI\\DataAccessLibrary\\DataAccessLibrary.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -682,6 +660,20 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "Dapper": {
+            "target": "Package",
+            "version": "[2.0.123, )"
+          },
+          "Microsoft.Extensions.Configuration.Abstractions": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
+          "System.Data.SqlClient": {
+            "target": "Package",
+            "version": "[4.8.4, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -694,9 +686,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
